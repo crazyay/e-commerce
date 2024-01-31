@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="text/css" rel="stylesheet" href="/css/login.css">
+    <link type="text/css" rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a class="navlogo"  href="/"><img class="navlogo" src="/images/logo.png" alt=""></a>
+          <a class="button" href="/" class="active" role="button">Home</a>
+          <a class="button" href="/cart" role="button">Cart</a>
+          <!-- <a href="account" role="button">Account</a> -->
+          <a class="button" href="/orders" role="button">Orders</a>
+          <a class="button" href="/login" role="button">Login</a>
+          <a class="button" href="/addproduct" role="button">Addcategory</a>
+          <a class="button" href="/addcollection" role="button">Addproduct</a>
+
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+          </a>
+          <!-- Add this form in your header or wherever you want the search bar -->
+<form class="search" action="/search" method="GET">
+    <input type="text" name="query" placeholder="Search products..." autocomplete="off" >
+    <button class="btn btn-success" type="submit">Search</button>
+</form>
+
+    </div>
+    <%- messages('messages', locals) %>
+        <!-- <script src="/javascript/index.js"></script> -->
+        

@@ -1,0 +1,18 @@
+<%-include('header');%> 
+<form  action="/login" method="post">
+ <div class="form">
+ <div class="inner-div">
+  <img class="logo" src="images/logo.png" alt="">
+   <div class="input">
+    <input  class="input2" type="email" name="username" id=""placeholder="E-mail">
+   </div>
+   <div class="input">
+    <input  class="input4" type="password" name="password" id="pass1"placeholder="Password" autocomplete="off">
+   </div>
+         <p>new user <a href="signup">create new account</a></p>
+         <p style="color: red;"><%=msg%></p>
+         <button class="login btn btn-primary" type="submit">LOGIN</button>
+    </div>
+ </div>
+</form>
+<%- include('footer'); %>

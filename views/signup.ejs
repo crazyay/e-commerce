@@ -1,0 +1,27 @@
+<%-include('header');%> 
+<!-- <img src="images/backgroundimg.avif" alt=""> -->
+<form  action="/signup" method="post">
+ <div class="form">
+  
+  <!-- <img class="logo" src="images/logo-color.png" alt=""> -->
+ <div class="inner-div">
+  <img class="logo" src="images/logo.png" alt="">
+ 
+   <div  class="input"> 
+    <input  class="input1" type="text" name="name" placeholder="Name">
+   </div>
+   <div class="input">
+    <input  class="input2" type="email" name="username" id=""placeholder="E-mail">
+   </div>
+   <div class="input">
+    <input  class="input4" type="password" name="password" id="pass1"placeholder="Password" autocomplete="off">
+   </div>
+   <div class="input">
+    <input  class="input3" type="password" name="confirmpassword" id="pass2" placeholder="Confirm password"></div>
+  
+    <button class="signin btn btn-primary" type="submit">SIGN UP</button>
+    <p style="color: red;"><%=msg%></p>
+   </div>
+    </div>
+
+</form>

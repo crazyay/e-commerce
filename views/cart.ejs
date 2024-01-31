@@ -1,0 +1,63 @@
+<%-include('header');%>
+<% if (carts.length === 0) { %>
+  <h2 style="color: red; font-family: 'Courier New', Courier, monospace; font-weight: 500;">Cart is empty</h2>
+<% }else{ %>
+
+<h3 style="padding-left: 10px;font-weight: 600; color: rgb(32, 169, 32); font-family: 'Courier New', Courier, monospace;">Your cart items</h3>
+<%}%>
+<section class="shop-content">
+  
+  <!-- <p>Cart Length: <%= carts.length %></p>
+  <p>Cart: <%= JSON.stringify(carts) %></p> -->
+
+<% carts.forEach(function(product){ %>
+  <% if (product && product.title) { %>
+    <a href="/<%=product.title%>">
+      <!-- <div class="box"> -->
+        <div class="box-content">
+          <h2><%=product.title%></h2>
+          <div class="box-img">
+            <img id="<%=product._id%>" class="img1" src="images/<%= product.img %>" alt="">
+          </div>
+
+          <form class="cartbuyform" action="/buy">
+            <h5 style="color: black;"> Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><%=product.price%></h5>
+         <button class="indexbutton btn btn-success" ><a style="color: white;" value="<%=product._id%>" href="/buy">Buy now </a></button>
+        </form>
+         <form class="cartdeleteform" action="/delete" method="post">
+         <button class="cartbutton btn btn-danger" name="cartbutton" value="<%=product._id%>">Remove</button>
+         </form>
+        
+        </div>
+
+      <!-- </div> -->
+     
+    </a>
+   
+    <% } %>
+  
+  <% }) %>
+ 
+
+</section>
+<% if (carts.length !== 0) { %>
+<div style="padding:10px 40px; display: flex; background-color: rgb(48, 226, 48);">
+  
+
+
+  <%
+  let total = 0;
+  carts.forEach(function(product) {
+    total += Number(product.price);
+  });
+%>
+
+  <h4 style="padding-top:10px ;">Total Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"> <%= total %></i></h4>
+  <a href="/buy" role="button">
+  <!-- <form class="cartbuyform" action="/buy" method="post"> -->
+   <button class="cartbutton btn btn-danger" name="cartbutton">Buy All</button>
+ <!-- </form> -->
+</a>
+</div>
+<% }%>
+<%-include('footer');%>

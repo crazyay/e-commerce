@@ -1,0 +1,103 @@
+
+.form{
+ 
+  background-image: url(/images/backimg.jpg);
+  background-repeat:no-repeat;
+  background-size:100%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 89.5vh; 
+    }
+   
+    input{
+    
+      min-height: 50px;
+      width:250px;
+      border-radius: 20px;
+     
+    }
+   
+.input{
+  margin: 6px;
+}
+   
+  
+    
+    .inner-div{
+     
+      border-radius: 10px;
+      display: flex;
+      box-shadow: 10px 10px 20px 7px #E5D4FF ;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     width: 400px;
+     height: 500px;
+     background-color: #D0A2F7;
+    
+    }
+    input[type=text]:focus{
+        outline:2px solid rgb(53, 193, 218);
+        outline-offset: -2px;
+    }
+    input[type=email]:focus{
+        outline:2px solid rgb(53, 193, 218);
+        outline-offset: -2px;
+    }
+    input[type=password]:focus{
+        outline:2px solid rgb(53, 193, 218);
+        outline-offset: -2px;
+       
+    }
+    .login{
+     
+      color: white;
+      border-radius:10px;
+      height: 40px;
+      width: 100px;
+      margin-top: 50px;
+      background-color: rgb(100, 223, 100);
+    }
+    .signin{
+      color: white;
+      border-radius:10px;
+      height: 40px;
+      width: 100px;
+      margin-top: 30px;
+      background-color: #12486B;
+    }
+    .alertmsg{
+      
+      color: red;
+    }
+    .logo{
+      height: 130px;
+      padding: 10px;
+      margin-bottom: 40px;
+    }
+    
+
+    /* .button {
+    
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+  
+  .button:active {
+      background-color: red;
+  }
+    
+  .button:focus {
+      background-color: red;
+  } */

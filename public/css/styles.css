@@ -1,0 +1,321 @@
+ 
+ body{
+  margin: auto;
+ /* box-sizing: border-box; */
+ }
+ .topnav {
+  z-index: 4;
+  margin: 0;
+  background-color: #333;
+  overflow: hidden;
+height: 63px/fit-content;
+text-align: center;
+align-items: center;
+}
+.search{
+  padding-top: 3px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  /* text-align: center; */
+
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topnav a.navlogo{
+  padding: 0px;
+}
+
+  .topnav .navlogo{
+    height: 64px;
+    padding: 0px 14px 0px 10px;
+
+    }
+
+
+
+
+ 
+    /* .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  } 
+  
+  .topnav .button:active {
+      background:red;
+  }
+    
+  .topnav .button:focus {
+      /* background: red; }*/
+   
+/* Change the color of links on hover */
+
+
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active{
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav a.icon {
+
+  display: none;
+} 
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* Hide specific anchors in the topnav on screens with max-width: 600px */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    /* :not(:nth-child(2)):not(:last-child) */
+
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* Display the icon anchor on the right when screen width is less than 600px */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a.active{
+    /* float: left; */
+    display: block;
+
+  }
+
+  /* Styles for the responsive class */
+  .topnav.responsive {
+    position: relative;
+    height: fit-content;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+   
+  }
+
+  /* Display all anchors in the responsive mode */
+  .topnav.responsive a{
+    display: block;
+    float: none;
+    text-align: left;
+   
+  }
+}
+
+
+/*sfksjd*/
+*{
+  margin: 0;
+  /* box-sizing: border-box; */
+  font-family: Arial, Helvetica, sans-serif;
+/* }
+ .home{
+  margin: 0;
+  display:flexbox;
+  /* background-image: -webkit-linear-gradient(50deg,#78D6C6 30%,#12486B 91%);
+  height: 200px; */
+  /* color: white;
+  text-align: center;
+  justify-content: center;
+  font-size: 60px; */
+  
+  }
+  
+    .carousel > .carousel-inner > .carousel-item > img{
+      width:240px; /* Yeap you can change the width and height*/
+      height:500px;
+  }
+  
+  .shop-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 100vw;
+    background-color: antiquewhite;
+  }
+ 
+  
+.box-content{
+  /* position: relative; */
+  border-radius: 10px;
+  height: fit-content;
+  transition: .5s;
+  box-shadow:10px 10px 20px 3px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  width:23%;
+     padding: 5px 10px;
+    /* height: 100%;  */
+}
+
+.box-content a{
+  text-decoration: none;
+}
+
+/* //////buttons in cart */
+.cartbutton{
+ 
+  background-color: #04AA6D;
+  margin: 3px;
+  border-radius: 5px;
+
+  
+}
+.indexbutton{
+  margin: 3px;
+
+  border-radius: 5px;
+  background-color: rgb(82, 82, 173);
+
+}
+
+.cartbuyform{
+  display:inline;
+}
+.cartdeleteform{
+  display:inline;
+  float:right;
+}
+.cartbuyform{
+  position: relative;
+  padding-left: 40px;
+  
+ }
+.img1{
+  border-radius: 10px;
+  max-height: 200px;
+}
+@media screen and (max-width: 1000px){
+  .shop-content.box{
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+  .box-content{
+    width: 30%;
+    height:fit-content ;
+  }
+}
+@media screen and (max-width: 600px){
+  .shop-content.box{
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+  .box-content{
+    width: 40%;
+    height:fit-content ;
+  }
+}
+@media screen and (max-width: 400px){
+  .shop-content.box{
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+  .box-content{
+    width: 60%;
+    height:fit-content ;
+  }
+}
+.box-img{
+  width: 100%;
+  height: 75%;
+}
+.img1{
+  width: 100%;
+  height: 100%;
+}
+.box-content:hover{
+  transform: scale(1.05);
+}
+.footer{
+  /* display: flex;
+  flex-wrap: wrap; */
+  margin-top: 15px;
+color:#ffff;
+  background-color: rgb(3, 3, 31);
+ }
+.box-footer{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  padding: 30px;
+  height: fit-content;
+
+}
+
+
+.last-box{
+text-align: center;
+justify-content: center;
+height: fit-content;
+width: 28%;
+
+
+
+ }
+ @media screen and (max-width: 400px){
+  .box-footer{
+  display: flex;
+    flex-wrap: wrap;
+ height: fit-content;
+  }
+  .last-box{
+    width: 51%;
+    height: fit-content;
+  }
+  
+ } 
+  .contact{
+  margin-top: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+.contact-icon{
+  padding-left: 40px;
+  font-size: 30px;
+}
+.product{
+  padding: 15px;
+}
+.description{
+  padding: 40px 40px 40px 0px;
+}
+
+
+
+/* //////account styling */
+.accountdiv{
+  height: 100vh;
+  width: 400px/fit-content;
+  padding-left: 50px;
+  background-color: grey;
+  font-size: 200%;
+  font-weight: 400;
+  color: #fff;
+  font-family: sans-serif;
+}

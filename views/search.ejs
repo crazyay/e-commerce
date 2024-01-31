@@ -1,0 +1,41 @@
+<!-- search.ejs -->
+<%-include('header');%> 
+
+    <h1>Search Results for <%= query %></h1>
+    
+    <% if (products.length > 0) { %>
+        <section class="shop-content">
+        <!-- <ul> -->
+            <% products.forEach(product => { %>
+       
+            <!-- <li>   -->
+                    <a href="/<%=product.title%>">
+                        <div class="box-content">
+                    <h2 style="padding: 3px;"><%=product.title%></h2>
+                    <div class="box-img">
+                        <img id="<%=product._id%>" class="img1" src="images/<%= product.img %>" alt="">
+                      </div>
+                      <a href=""></a>
+                      <div class="description" >
+                        <h3>About product</h3>
+                       <h6> Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><%= product.price %></h6>
+                       <p>  <%= product.desc %> </p>
+                      </div>
+                      
+                    <!-- <h3><%= product.title %></h3> -->
+                
+                    <!-- Add more details as needed -->
+                <!-- </li> -->
+            </div>
+            </a>
+            <% }); %>
+        <!-- </ul> -->
+      
+    </section>
+    <% } else { %>
+        <p>No results found.</p>
+    <% } %>
+
+   
+</body>
+</html>

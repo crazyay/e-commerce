@@ -1,0 +1,112 @@
+ <%-include('header');%>
+ <!-- <%- messages() %> -->
+
+<div class="slide">
+ <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/carousel1.avif" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/carousel2.avif" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/carousel3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<h3 style="padding-left: 10px;font-weight: 600; color: rgb(32, 169, 32); font-family: 'Courier New', Courier, monospace;">Select the category in which you want to shop</h3>
+
+<section class="shop-content">
+  
+    <% products.forEach(function(product){ %>
+
+      <a href="/collections/<%=product.title%>">
+        <!-- <div class="box"> -->
+          <div class="box-content">
+            <h2><%= product.title %></h2> 
+            <div style="padding-bottom: 12px;" class="box-img">
+              <img id="<%=product._id%>" class="img1" src="images/<%=product.img%>" alt="" loading="lazy">
+            </div>
+            <a value="<%=product._id%>" href="#<%=product._id%>"></a> 
+            <!-- <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p> -->
+            <!-- <button class="indexbutton btn btn-success" style="  margin: 5px; outline: none;"name="button" value="<%=product._id%>" type="submit">Buy Now</button>
+
+            <form class="cartdeleteform" action="/addtocart" method="post">
+            <button class="indexbutton btn btn-primary" style="  margin: 5px; outline: none;"name="button" value="<%=product._id%>" type="submit">Add to cart</button>
+          </form> -->
+          </div>
+        <!-- </div> -->
+      </a>
+    <% }) %>
+  </section>
+  <%- include('footer'); %>
+  
+  <!-- <div class="box-content">
+  <h2>Electronics</h2>
+  <div class="box-img">
+  <img class="img1" src="images/carousel3.jpg" alt="">
+  </div>
+  <a href="">Buy now</a>
+  </div>
+ 
+    <div class="box-content">
+    <h2>Shoes</h2>
+  <div class="box-img">
+    <img class="img1" src="images/content-download-headless-infographic-bigcommerce.webp" alt="">
+  </div>
+  <a href="">cart it</a>
+</div>
+  
+  <div class="box-content">
+    <h2>Kids</h2>
+  <div class="box-img">
+    <img class="img1" src="images/img2.jpg" alt="">
+  </div>
+  <a href="">cart it</a>
+</div>
+  
+    <div class="box-content">
+    <h2>Gym corner</h2>
+   <div class="box-img">
+    <img class="img1" src="images/image3.jpg" alt="">
+  </div>
+  <a href="">cart it</a>
+</div>
+  
+    <div class="box-content">
+    <h2>Gym corner</h2>
+ <div class="box-img">
+    <img class="img1" src="images/img1.jpg" alt="">
+  </div>
+  <a href="">cart it</a>
+</div>
+  
+    <div class="box-content">
+    <h2>Gym corner</h2>
+  <div class="box-img">
+    <img class="img1" src="images/img1.jpg" alt="">
+  </div>
+  <a href="">cart it</a>
+</div>
+ 
+    <div class="box-content">
+    <h2>Gym corner </h2>
+ <div class="box-img">
+    <img class="img1" src="images/img2.jpg" alt="">
+  </div>
+  <a href="">cart it</a>
+</div>
+</div>  -->
+<!-- </section> -->
+<!-- <%-include('footer');%> -->
