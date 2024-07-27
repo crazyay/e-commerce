@@ -1,3 +1,27 @@
-<%-include('header');%> 
+<%- include('header'); %>
 
-<%-include('footer');%>
+<h2>Your Orders</h2>
+
+<% if (orders.length === 0) { %>
+  <p>No orders found.</p>
+<% } else { %>
+  <ul>
+    <% orders.forEach(function(order) { %>
+      <li>
+        <h3>Order Date: <%= order.orderDate.toDateString() %></h3>
+        <ul>
+          <% order.products.forEach(function(product) { %>
+            <li>
+              <img src="/images/<%= product.img %>" alt="<%= product.title %>" style="width: 50px;">
+              <span><%= product.title %></span>
+              <span>Price: <%= product.price %></span>
+            </li>
+          <% }) %>
+        </ul>
+        <p>Total: <%= order.total %></p>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<%- include('footer'); %>

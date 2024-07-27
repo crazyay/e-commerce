@@ -7,8 +7,9 @@
          </div>
          <!-- <form style="display: inline-block;" action="/buy"> -->
           
-         <button class="indexbutton btn btn-success" style="  margin: 5px; outline: none;" name="button" value="<%=id%>"><a style="color: white;"  role="button" href="/buy">Buy now</a></button>
-       
+         <form class="cartdeleteform" action="/buy" method="get">
+          <button class="indexbutton btn btn-success" style="margin: 5px; outline: none;" name="productId" value="<%=id %>" type="submit">Buy Now</button>
+        </form>
          <form class="cartdeleteform" action="/addtocart" method="post">
          <button class="cartbutton indexbutton btn btn-primary" style="  margin: 5px; outline: none;" name="button" value="<%=id%>" type="submit">   <a value="<%=id%>" href="#"></a>Add to cart</button>
          </form>

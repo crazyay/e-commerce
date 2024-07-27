@@ -2,7 +2,7 @@
 <h3 style="padding-left: 10px;font-weight: 600; color: rgb(32, 169, 32); font-family: 'Courier New', Courier, monospace;">Your products</h3>
 <section class="shop-content">
   <!-- <h1>hello</h1> -->
- 
+
     <% products.forEach(function(product){ %>
      
       <a href="/<%=product.title%>">
@@ -14,12 +14,17 @@
             </div>
             <p> Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><%=product.price%></p>
             <a value="<%=product._id%>" href="#<%=product._id%>"></a> 
-            <form style="display: inline-block;" action="">
-            <button class="indexbutton btn btn-success" style="  margin: 5px; outline: none;"name="button" value="<%=product._id%>" type="submit"><a style="color: white;"  role="button" href="/buy">Buy now</a></button>
-          </form>
-            <form class="cartdeleteform" action="/addtocart" method="post">
-            <button class="indexbutton btn btn-primary" style="  margin: 5px; outline: none;"name="button" value="<%=product._id%>" type="submit">Add to cart</button>
-          </form>
+            <a style="color: white;"  role="button" href="/buy">Buy now</a>
+          
+            <div class="button-container">
+              <form class="buy-form" action="/buy" method="get">
+                <button class="indexbutton btn btn-success" name="productId" value="<%= product._id %>" type="submit">Buy Now</button>
+              </form>
+              
+              <form class="cart-form" action="/addtocart" method="post">
+                <button class="indexbutton btn btn-primary" name="button" value="<%= product._id %>" type="submit">Add to Cart</button>
+              </form>
+            </div>
           </div>
         <!-- </div> -->
       </a>

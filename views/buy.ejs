@@ -1,15 +1,72 @@
-<%-include('header');%>
-<div>
-<h4>choose payment method</h4>
-<label for="cars">Choose method</label>
+<%- include('header'); %>
 
-<select id="cars">
-  <option value="card">card</option>
-  <option value="paytm">paytm</option>
-  <option value="upi">upi</option>
-  <option value="net banking">net banking</option>
-</select>
-</div>
+<% if (fromCart) { %>
+  <h3 style="padding-left: 10px;font-weight: 600; color: rgb(32, 169, 32); font-family: 'Courier New', Courier, monospace;">Your cart items</h3>
+  <section class="shop-content">
+    <% products.forEach(function(product) { %>
+      <div class="box-content">
+        <h2><%= product.title %></h2>
+        <div class="box-img">
+          <img id="<%= product._id %>" class="img1" src="/images/<%= product.img %>" alt="">
+        </div>
+        <p> Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><%= product.price %></p>
+      </div>
+    <% }) %>
+  </section>
+  <div style="padding:10px 40px; display: flex; background-color: rgb(48, 226, 48);">
+    <%
+    let total = 0;
+    products.forEach(function(product) {
+      total += Number(product.price);
+    });
+    %>
+    <h4 style="padding-top:10px; padding-right: 15px;">Total Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"> <%= total %></i></h4>
+    <form action="/process-payment" method="post" style="display: flex; align-items: center;">
+      <div class="form-group" style="margin-right: 20px;">
+        <label for="payment-method" style="margin-right: 10px;">Select Payment Method:</label>
+        <select name="payment-method" id="payment-method" class="form-control">
+          <option value="CreditCard">Credit Card</option>
+          <option value="DebitCard">Debit Card</option>
+          <option value="PayPal">PayPal</option>
+          <option value="NetBanking">Net Banking</option>
+        </select>
+      </div>
+      <button class="cartbutton btn btn-danger" type="submit">Proceed to Pay</button>
+    </form>
+  </div>
+<% } else { %>
+  <h3 style="padding-left: 10px;font-weight: 600; color: rgb(32, 169, 32); font-family: 'Courier New', Courier, monospace;">Your product</h3>
+  <section class="shop-content">
+    <% products.forEach(function(product) { %>
+      <div class="box-content">
+        <h2><%= product.title %></h2>
+        <div class="box-img">
+          <img id="<%= product._id %>" class="img1" src="/images/<%= product.img %>" alt="">
+        </div>
+        <p style="padding-right: 15px;" > Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign "></i><%= product.price %></p>
+        <form action="/process-payment" method="post" style="display: flex; align-items: center;">
+          <input type="hidden" name="product-id" value="<%= product._id %>">
+          <input type="hidden" name="product-price" value="<%= product.price %>">
+          <input type="hidden" name="product-title" value="<%= product.title %>">
+          <input type="hidden" name="product-img" value="<%= product.img %>">
+          <div class="form-group" style="margin-right: 20px; display: flex; flex-direction: column;">
+            <div>
+            <label for="payment-method" style="margin-right: 10px;">Select Payment Method:</label>
+          </div>
+          <div>
+            <select name="payment-method" id="payment-method" class="form-control">
+              <option value="CreditCard">Credit Card</option>
+              <option value="DebitCard">Debit Card</option>
+              <option value="PayPal">PayPal</option>
+              <option value="NetBanking">Net Banking</option>
+            </select>
+          </div>
+          </div>
+          <button class="indexbutton btn btn-success" type="submit">Proceed to Pay</button>
+        </form>
+      </div>
+    <% }) %>
+  </section>
+<% } %>
 
-
-<%-include('footer');%>
+<%- include('footer'); %>

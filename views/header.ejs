@@ -14,25 +14,27 @@
 <body>
 
     <div class="topnav" id="myTopnav">
-        <a class="navlogo"  href="/"><img class="navlogo" src="/images/logo.png" alt=""></a>
-          <a class="button" href="/" class="active" role="button">Home</a>
-          <a class="button" href="/cart" role="button">Cart</a>
-          <!-- <a href="account" role="button">Account</a> -->
-          <a class="button" href="/orders" role="button">Orders</a>
-          <a class="button" href="/login" role="button">Login</a>
-          <a class="button" href="/addproduct" role="button">Addcategory</a>
-          <a class="button" href="/addcollection" role="button">Addproduct</a>
-
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-          </a>
-          <!-- Add this form in your header or wherever you want the search bar -->
-<form class="search" action="/search" method="GET">
-    <input type="text" name="query" placeholder="Search products..." autocomplete="off" >
-    <button class="btn btn-success" type="submit">Search</button>
-</form>
-
+        <a class="navlogo" href="/"><img class="navlogo" src="/images/logo.png" alt=""></a>
+        <a class="button" href="/" class="active" role="button">Home</a>
+        <a class="button" href="/cart" role="button">Cart</a>
+        <a class="button" href="/orders" role="button">Orders</a>
+        <% if (user) { %>
+            <a class="button" href="/logout" role="button">Logout</a>
+        <% } else { %>
+            <a class="button" href="/login" role="button">Login</a>
+        <% } %>
+        
+        <!-- <a class="button" href="/addproduct" role="button">Addcategory</a>
+        <a class="button" href="/addcollection" role="button">Addproduct</a> -->
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    
+        <form class="search" action="/search" method="GET">
+            <input type="text" name="query" placeholder="Search products..." autocomplete="off">
+            <button class="btn btn-success" type="submit">Search</button>
+        </form>
     </div>
     <%- messages('messages', locals) %>
-        <!-- <script src="/javascript/index.js"></script> -->
-        
+    

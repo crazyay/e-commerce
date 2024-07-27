@@ -319,3 +319,53 @@ width: 28%;
   color: #fff;
   font-family: sans-serif;
 }
+/* buy css */
+.hidden {
+  display: none;
+}
+
+.payment-container {
+  padding: 20px;
+}
+
+.payment-details {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #4CAF50; /* Example color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  margin-right: 10px;
+}
+
+.form-group select {
+  padding: 5px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons as needed */
+}
