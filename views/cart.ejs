@@ -14,11 +14,11 @@
             <img id="<%= product._id %>" class="img1" src="images/<%= product.img %>" alt="">
           </div>
           <h5 style="color: black;">Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><%= product.price %></h5>
-          <div class="button-container">
-            <form class="buy-form" action="/buy" method="get">
+          <div class="button-container"> 
+            <form class="buy-form" action="/order/buy" method="get">
               <button class="indexbutton btn btn-success" name="productId" value="<%= product._id %>" type="submit">Buy Now</button>
             </form>
-            <form class="cartdeleteform" action="/delete" method="post">
+            <form class="cartdeleteform" action="/cart/delete" method="post">
               <button class="cartbutton btn btn-danger" name="cartbutton" value="<%= product._id %>">Remove</button>
             </form>
           </div>
@@ -35,7 +35,7 @@
     });
     %>
     <h4 style="padding-top: 10px;">Total Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"> <%= total %></i></h4>
-    <a href="/buy" role="button">
+    <a href="/order/buy" role="button">
       <button class="cartbutton btn btn-danger" name="cartbutton">Buy All</button>
     </a>
   </div>

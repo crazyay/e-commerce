@@ -5,7 +5,7 @@
 
     <% products.forEach(function(product){ %>
      
-      <a href="/<%=product.title%>">
+      <a href="/collection/<%=product.title%>">
         <!-- <div class="box"> -->
           <div class="box-content">
             <h2><%=product.title%></h2> 
@@ -14,14 +14,14 @@
             </div>
             <p> Price = <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><%=product.price%></p>
             <a value="<%=product._id%>" href="#<%=product._id%>"></a> 
-            <a style="color: white;"  role="button" href="/buy">Buy now</a>
+            <a style="color: white;"  role="button" href="/order/buy">Buy now</a>
           
             <div class="button-container">
-              <form class="buy-form" action="/buy" method="get">
+              <form class="buy-form" action="/order/buy" method="get">
                 <button class="indexbutton btn btn-success" name="productId" value="<%= product._id %>" type="submit">Buy Now</button>
               </form>
               
-              <form class="cart-form" action="/addtocart" method="post">
+              <form class="cart-form" action="/cart/addtocart" method="post">
                 <button class="indexbutton btn btn-primary" name="button" value="<%= product._id %>" type="submit">Add to Cart</button>
               </form>
             </div>

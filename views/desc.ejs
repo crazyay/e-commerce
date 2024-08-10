@@ -3,14 +3,14 @@
       <div class="box-content" style="margin-left: 50px;">
        <h2><%=title%></h2>
          <div class="box-img">
-        <img id="<%=id%>" class="img1" src="images/<%=img%>" alt="">
-         </div>
+        <img id="<%=id%>" class="img1" src="/images/<%=img%>" alt="">
+         </div>  
          <!-- <form style="display: inline-block;" action="/buy"> -->
           
-         <form class="cartdeleteform" action="/buy" method="get">
+         <form class="cartdeleteform" action="/order/buy" method="get">
           <button class="indexbutton btn btn-success" style="margin: 5px; outline: none;" name="productId" value="<%=id %>" type="submit">Buy Now</button>
         </form>
-         <form class="cartdeleteform" action="/addtocart" method="post">
+         <form class="cartdeleteform" action="/cart/addtocart" method="post">
          <button class="cartbutton indexbutton btn btn-primary" style="  margin: 5px; outline: none;" name="button" value="<%=id%>" type="submit">   <a value="<%=id%>" href="#"></a>Add to cart</button>
          </form>
           <!-- </div> -->

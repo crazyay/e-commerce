@@ -17,11 +17,11 @@
         <a class="navlogo" href="/"><img class="navlogo" src="/images/logo.png" alt=""></a>
         <a class="button" href="/" class="active" role="button">Home</a>
         <a class="button" href="/cart" role="button">Cart</a>
-        <a class="button" href="/orders" role="button">Orders</a>
+        <a class="button" href="/order/orders" role="button">Orders</a>
         <% if (user) { %>
-            <a class="button" href="/logout" role="button">Logout</a>
+            <a class="button" href="/auth/logout" role="button">Logout</a>
         <% } else { %>
-            <a class="button" href="/login" role="button">Login</a>
+            <a class="button" href="/auth/login" role="button">Login</a>
         <% } %>
         
         <!-- <a class="button" href="/addproduct" role="button">Addcategory</a>
